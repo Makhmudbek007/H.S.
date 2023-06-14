@@ -11,6 +11,10 @@
     .carousel-item{
         height: 100vh;
     }
+    .carouselHome{
+        height: 500px;
+        width: 500px;
+    }
     .row{
         margin-top: 5vh;
     }
@@ -64,7 +68,6 @@
     }
     .col-lg-4{
         text-align: center;
-        padding-top: 15px;
     }
     .col-lg-4:hover{
         background-color: rgba(245, 222, 179, 0.1);
@@ -74,12 +77,32 @@
         outline: 2px solid wheat;
         text-align: center;
     }
+    .subLink{
+        text-decoration: none;
+        color: black;
+    }
+    #searchBtn{
+        background-color: whitesmoke;
+        outline: 2px solid white;
+        border: 2px solid #30A2FF;
+    }
+    .subLink:hover{
+        color: #30A2FF;
+    }
+    .menuBtn{
+        background-color: #30A2FF;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .menuBtn:hover{
+        background-color: #008cff;
+        color: rgba(255, 255, 255, 0.993);
+    }
 </style>
 <body>
 
-    <!-- ?============================================= Menu ===========================================================? -->
+<!-- ?============================================= Menu ===========================================================? -->
     
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #30A2FF;">
         <div class="container-fluid">
           <a class="navbar-brand" href="file:///C:/Users/hp/Desktop/New%20Project/index.html">JEMMA.uz</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,181 +111,244 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link" href="#myCarousel">Home</a>
+                <a class="nav-link menuBtn" href="#myCarousel">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#murojat">Murojat</a>
+                <a class="nav-link menuBtn" href="#murojat">Murojat</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#forSale">Uylar</a>
+                <a class="nav-link menuBtn" href="#forSale">Uylar</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" id="searchInp" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <button class="btn btn-outline-success"  id="searchBtn" type="submit" onclick="searchHome()">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="subLink" id="subLink" href="#">Search</a>
+                    </li>
+                </ul>
+            </button>
             </form>
           </div>
         </div>
       </nav>
 
-      <!-- ?============================================= Corusel ===========================================================? -->
+<!-- ?============================================= Corusel ===========================================================? -->
 
-      <main>
-    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
-        <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="home_1"></div>
-                <div class="container">
-                <div class="carousel-caption text-start">
-                    <h1>#3 Example headline.</h1>
-                    <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-                    <p><a class="btn btn-lg btnBuy" href="#3">Batafsil</a></p>
+    <main>
+        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="home_1"></div>
+                    <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>#3 Example headline.</h1>
+                        <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+                        <p><a class="btn btn-lg btnBuy" href="#3">Batafsil</a></p>
+                    </div>
+                    </div>
                 </div>
+                <div class="carousel-item">
+                    <div class="home_2"></div>
+                    <div class="container">
+                    <div class="carousel-caption">
+                        <h1>#2 Another example headline.</h1>
+                        <p>Some representative placeholder content for the second slide of the carousel.</p>
+                        <p><a class="btn btn-lg btnBuy" href="#2">Batafsil</a></p>
+                    </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="home_3"></div>
+                    <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>#1 One more for good measure.</h1>
+                        <p>Some representative placeholder content for the third slide of this carousel.</p>
+                        <p><a class="btn btn-lg btnBuy" href="#1">Batafsil</a></p>
+                    </div>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="home_2"></div>
-                <div class="container">
-                <div class="carousel-caption">
-                    <h1>#2 Another example headline.</h1>
-                    <p>Some representative placeholder content for the second slide of the carousel.</p>
-                    <p><a class="btn btn-lg btnBuy" href="#2">Batafsil</a></p>
-                </div>
-                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+<!-- ?============================================= Murojat ===========================================================? -->
+        <div class="container marketing">
+            <!-- Three columns of text below the carousel -->
+            <div id="murojat"></div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4" id="murojat1">
+                    <br><br><br>
+                    <img class="bd-placeholder-img rounded-circle" src="Makh.jpg" width="140" height="140"><title>+998 90 999 99 99</title>
+                    <h2 class="fw-normal">M. Makhsudov</h2>
+                    <p>Makhmudbek ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quos explicabo, nesciunt voluptas distinctio quasi tempora perferendis nulla dicta incidunt dolor sequi totam ex! Quam consequuntur vel ipsam quaerat nemo.</p>
+                    <p><a class="btn btn-secondary btnMurojat btnMurojat" href="#murojat1">Murojat</a></p>
+                </div><!-- Murijat 1 -->
+                <div class="col-lg-4" id="murojat2">
+                    <br><br><br>
+                    <img class="bd-placeholder-img rounded-circle" src="islom.jpg" width="140" height="140"><title>+998 92 999 99 99</title>
+                    <h2 class="fw-normal">I. Fayzullayev</h2>
+                    <p>Islom ipsum dolor sit amet consectetur, adipisicing elit. Ea, ad similique facilis, optio excepturi aliquam assumenda, in Fayzullayev quis iure nobis veritatis earum quidem quod ratione dolorum sunt unde magni possimus.</p>
+                    <p><a class="btn btn-secondary btnMurojat" href="#murojat2">Murojat</a></p>
+                </div><!-- Murijat 2 -->
+                <div class="col-lg-4" id="murojat3">
+                    <br><br><br>
+                    <img class="bd-placeholder-img rounded-circle" src="jaxongir.jpg" width="140" height="140"><title>+998 91 999 99 99</title>
+                    <h2 class="fw-normal">J. Hakimov</h2>
+                    <p>Jahongir ipsum dolor, sit amet consectetur adipisicing elit. Non repellendus libero laboriosam maiores aspernatur impedit ipsum facere, ad unde aperiam voluptatem vel, aut eum repellat inventore accusamus obcaecati nihil.</p>
+                    <p><a class="btn btn-secondary btnMurojat" href="#murojat3">Murojat</a></p>
+                </div><!-- Murijat 3 -->
+                
+            </div><!-- /.row -->
+
+
+<!-- ?============================================= Uylar ===========================================================? -->
+            <div id="forSale"></div>
+<!-- ?============================================= Uy #1 ===========================================================? -->
+            <div id="1"></div>
+            <br><br><br>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1"><span>1.</span>First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
+                <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
             </div>
-            <div class="carousel-item">
-                <div class="home_3"></div>
-                <div class="container">
-                <div class="carousel-caption text-end">
-                    <h1>#1 One more for good measure.</h1>
-                    <p>Some representative placeholder content for the third slide of this carousel.</p>
-                    <p><a class="btn btn-lg btnBuy" href="#1">Batafsil</a></p>
+            <div class="col-md-5">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" style="background-color: #008cff;"></svg>
+                
+
+
+                <div id="homeCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item carouselHome active">
+                            <div class="home_1"></div>
+                            <div class="container">
+                            <div class="carousel-caption text-start">
+                                <h1>#3 Example headline.</h1>
+                                <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+                                <p><a class="btn btn-lg btnBuy" href="#3">Batafsil</a></p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carouselHome">
+                            <div class="home_2"></div>
+                            <div class="container">
+                            <div class="carousel-caption">
+                                <h1>#2 Another example headline.</h1>
+                                <p>Some representative placeholder content for the second slide of the carousel.</p>
+                                <p><a class="btn btn-lg btnBuy" href="#2">Batafsil</a></p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carouselHome">
+                            <div class="home_3"></div>
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>#1 One more for good measure.</h1>
+                                <p>Some representative placeholder content for the third slide of this carousel.</p>
+                                <p><a class="btn btn-lg btnBuy" href="#1">Batafsil</a></p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                </div>
+
+
+                
             </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+            </div>
+
+<!-- ?============================================= Uy #2 ===========================================================? -->
+            <div id="2"></div>
+            <br><br><br>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1"><span>2.</span>Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
+                <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            </div>
+            </div>
+<!-- ?============================================= Uy #3 ===========================================================? -->
+            <div id="3"></div>
+            <br><br><br>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1"><span>3.</span>And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
+                <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+            </div>
+            <div class="col-md-5">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            </div>
+            </div>
+
+            <hr class="featurette-divider">
+<!-- ?============================================= Uy #4 ===========================================================? -->
+            <div id="4"></div>
+            <br><br><br>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1"><span>4.</span>Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
+                <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
 
 
-    <!-- ?============================================= Murojat ===========================================================? -->
-    <div class="container marketing">
-        <!-- Three columns of text below the carousel -->
-        <div id="murojat"></div>
-        <br><br><br>
-        <div class="row">
-            <div class="col-lg-4" id=" murojat1">
-                <img class="bd-placeholder-img rounded-circle" src="Makh.jpg" width="140" height="140"><title>+998 90 999 99 99</title>
-                <h2 class="fw-normal">M. Makhsudov</h2>
-                <p>Makhmudbek ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quos explicabo, nesciunt voluptas distinctio quasi tempora perferendis nulla dicta incidunt dolor sequi totam ex! Quam consequuntur vel ipsam quaerat nemo.</p>
-                <p><a class="btn btn-secondary btnMurojat btnMurojat" href="#murojat1">Murojat</a></p>
-            </div><!-- Murijat 1 -->
-            <div class="col-lg-4" id=" murojat2">
-                <img class="bd-placeholder-img rounded-circle" src="islom.jpg" width="140" height="140"><title>+998 92 999 99 99</title>
-                <h2 class="fw-normal">I. Fayzullayev</h2>
-                <p>Islom ipsum dolor sit amet consectetur, adipisicing elit. Ea, ad similique facilis, optio excepturi aliquam assumenda, in Fayzullayev quis iure nobis veritatis earum quidem quod ratione dolorum sunt unde magni possimus.</p>
-                <p><a class="btn btn-secondary btnMurojat" href="#murojat2">Murojat</a></p>
-            </div><!-- Murijat 2 -->
-            <div class="col-lg-4" id=" murojat3">
-                <img class="bd-placeholder-img rounded-circle" src="jaxongir.jpg" width="140" height="140"><title>+998 91 999 99 99</title>
-                <h2 class="fw-normal">J. Hakimov</h2>
-                <p>Jahongir ipsum dolor, sit amet consectetur adipisicing elit. Non repellendus libero laboriosam maiores aspernatur impedit ipsum facere, ad unde aperiam voluptatem vel, aut eum repellat inventore accusamus obcaecati nihil.</p>
-                <p><a class="btn btn-secondary btnMurojat" href="#murojat3">Murojat</a></p>
-            </div><!-- Murijat 3 -->
-            
-        </div><!-- /.row -->
-
-
-        <!-- ?============================================= Uylar ===========================================================? -->
-        <div id="forSale"></div>
-        <!-- ?============================================= Uy #1 ===========================================================? -->
-        <div id="1"></div>
-        <br><br><br>
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1"><span>1.</span>First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
-            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-        </div>
-        <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-        </div>
-        </div>
-
-        <!-- ?============================================= Uy #2 ===========================================================? -->
-        <div id="2"></div>
-        <br><br><br>
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
-            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-        </div>
-        <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-        </div>
-        </div>
-        <!-- ?============================================= Uy #3 ===========================================================? -->
-        <div id="3"></div>
-        <br><br><br>
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
-            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-        </div>
-        <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-        </div>
-        </div>
-
-        <hr class="featurette-divider">
-        <!-- ?============================================= Uy #4 ===========================================================? -->
-        <div id="3"></div>
-        <br><br><br>
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
-            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-        </div>
-        <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-        </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
-
-    </div><!-- /.container -->
-
-
-    <!-- FOOTER -->
-    <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>© 2017–2023 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-    </footer>
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>© 2017–2023 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer>
     </main>
     <script>
-        function btnBuy() {
-            document.getElementById("btnBuy").style.backgroundColor = "rgba(245, 222, 179, 0.6)";
+        function searchHome() {
+            let xValue = document.getElementById("searchInp").value;
+            if (xValue == "") {
+                stop;
+            } else {
+                document.getElementById("subLink").href = "#"+xValue;
+            }
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
